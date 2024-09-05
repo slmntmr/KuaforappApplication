@@ -31,7 +31,7 @@ public class AppointmentService {
     public AppointmentResponse createAppointment(AppointmentRequest request) {
         Customer customer = customerRepository.findById(request.getCustomerId())
                 .orElseThrow(() -> new RuntimeException("Customer not found"));
-        Offering offering = offeringRepository.findById(request.getServiceId())
+        Offering offering = offeringRepository.findById(request.getOfferingId())
                 .orElseThrow(() -> new RuntimeException("Offering not found"));
         Employee employee = employeeRepository.findById(request.getEmployeeId())
                 .orElseThrow(() -> new RuntimeException("Employee not found"));

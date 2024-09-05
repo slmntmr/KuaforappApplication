@@ -3,7 +3,6 @@ package com.kuaforapp.entity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
-import nonapi.io.github.classgraph.json.Id;
 
 import java.util.List;
 
