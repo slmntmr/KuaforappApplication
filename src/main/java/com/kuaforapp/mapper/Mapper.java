@@ -65,6 +65,7 @@ public class Mapper {
                 .firstName(employeeRequest.getFirstName())
                 .lastName(employeeRequest.getLastName())
                 .phone(employeeRequest.getPhone())
+                .email(employeeRequest.getEmail())
                 .build();
     }
 
@@ -75,6 +76,7 @@ public class Mapper {
                 .firstName(employee.getFirstName())
                 .lastName(employee.getLastName())
                 .phone(employee.getPhone())
+                .email(employee.getEmail())
                 .build();
     }
 

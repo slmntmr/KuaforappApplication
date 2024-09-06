@@ -15,12 +15,12 @@ public class AppointmentController {
 
     private final AppointmentService appointmentService;
 
-    @PostMapping
+    @PostMapping("/createAppointment") // http://localhost:8080/appointments/createAppointment + POST + JSON
     public AppointmentResponse createAppointment(@RequestBody AppointmentRequest request) {
         return appointmentService.createAppointment(request);
     }
 
-    @GetMapping
+    @GetMapping("/getAllAppointments") // http://localhost:8080/appointments/getAllAppointments + GET
     public List<AppointmentResponse> getAllAppointments() {
         return appointmentService.getAllAppointments();
     }

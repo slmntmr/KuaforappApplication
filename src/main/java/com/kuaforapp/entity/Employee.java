@@ -1,14 +1,16 @@
 package com.kuaforapp.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
-@Builder
-@Entity
+@Entity // Bu sınıfın bir JPA varlığı olduğunu belirtir.
+@Getter // Lombok tarafından getter metodlarını otomatik olarak oluşturur.
+@Setter // Lombok tarafından setter metodlarını otomatik olarak oluşturur.
+@AllArgsConstructor // Lombok tarafından tüm alanları içeren bir yapıcı (constructor) oluşturur.
+@NoArgsConstructor // Lombok tarafından parametresiz bir yapıcı (constructor) oluşturur.
+@Builder(toBuilder = true)
 public class Employee {
 
     @Id
@@ -17,6 +19,7 @@ public class Employee {
 
     private String firstName;
     private String lastName;
+    private String email;
     private String phone;
 
     @OneToMany(mappedBy = "employee")

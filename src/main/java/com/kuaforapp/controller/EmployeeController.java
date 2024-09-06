@@ -1,6 +1,5 @@
 package com.kuaforapp.controller;
 
-
 import com.kuaforapp.dto.Request.EmployeeRequest;
 import com.kuaforapp.dto.Response.EmployeeResponse;
 import com.kuaforapp.service.EmployeeService;
@@ -16,12 +15,12 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-    @PostMapping
+    @PostMapping("/createEmployee") // http://localhost:8080/employees/createEmployee + POST + JSON
     public EmployeeResponse createEmployee(@RequestBody EmployeeRequest request) {
         return employeeService.createEmployee(request);
     }
 
-    @GetMapping
+    @GetMapping("/getAllEmployees") // http://localhost:8080/employees/getAllEmployees + GET
     public List<EmployeeResponse> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
